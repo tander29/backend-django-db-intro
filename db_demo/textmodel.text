@@ -1,0 +1,41 @@
+Permissions(id, title, 
+Roles (id, title
+Users (id, username, password, email, 
+UserRoles(user_id, role_id
+Profiles(id, user_id, body, avatar
+Tags(id, body, user_id
+
+don't need class RolePermissions(role_id, permissions_id
+Pages (id, user_id, is_published, is_flagged,  category_id, title, body
+Categories (id, user_id, category_title, category_parent_id
+
+TaggedPages(page_id, tag_id
+PagesContributors(pages_id, user_id, role_id
+
+not in their answer but i had:
+PageCategories (pages_id, category_id
+
+Authenticated users assigned the admin role have permission to create categories for pages
+Authenticated users assigned the admin role have permission to flag pages for review
+Authenticated users assigned the admin role have permission to un-flag pages flag by other admins
+Authenticated users assigned the admin role have permission to un-publish pages of any user
+Authenticated users have one and only one profile
+Authenticated users may read published pages of any user
+Authenticated users may update and delete pages they have created
+Categories may have one and only one parent category
+Categories mush have a title
+Contributors have permission to create, update, or delete pages depending on their role
+Contributors must have an assigned role
+Pages belong to one and only one user
+Pages flagged for review are immediately unpublished
+Pages may be assigned to one and only one category
+Pages may be published or not
+Pages may have multiple contributors
+Pages must have a title and body
+Permissions must have a title
+Profiles may have a body
+Profiles may have an avatar
+Roles must have a title
+Tags can be applied to multiple pages
+Tags must have a body
+Unauthenticated users may read published pages of any user
